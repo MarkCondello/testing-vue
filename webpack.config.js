@@ -1,7 +1,10 @@
-// module.exports = {
-//      resolve: {
-//         fallback: {
-//           util: require.resolve("util/")
-//         }
-//     }
-// };
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.vue$/,
+                use: 'vue-loader',
+            }
+        ]
+    }
+};

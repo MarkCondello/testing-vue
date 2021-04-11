@@ -1,4 +1,4 @@
-import Counter from '../src/components/Counter.js';
+import Counter from '../src/components/Counter.vue';
 import { mount } from 'vue-test-utils'; // mochs up inputs like props automatically
 import expect from "expect"; // package to assert expected values
 
