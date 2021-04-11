@@ -1,0 +1,27 @@
+{
+  "name": "testingvue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mochapack --webpack-config webpack.config.js --require test/setup.js test/*.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "expect": "^21.2.1",
+    "jsdom": "^11.3.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^7.1.1",
+    "mochapack": "^2.0.6",
+    "vue-template-compiler": "^2.4.4",
+    "vue-test-utils": "^1.0.0-beta.1",
+    "webpack": "^4.35.1"
+  },
+  "dependencies": {
+    "run": "^1.4.0",
+    "test": "^0.6.0",
+    "vue": "^2.4.4"
+  }
+}
