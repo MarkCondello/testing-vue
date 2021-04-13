@@ -13,9 +13,9 @@ describe ('Counter', ()=>{
         expect(wrapper.vm.count).toBe(0);
     });
 
-    it('increments the count when button is clicked', ()=>{
+    it('increments the count when increment button is clicked on', ()=>{
         expect(wrapper.vm.count).toBe(0);
-        wrapper.find('button').trigger('click');
+        wrapper.find('.increment').trigger('click');
         expect(wrapper.vm.count).toBe(1);
     });
 
@@ -24,4 +24,18 @@ describe ('Counter', ()=>{
         wrapper.find('button').trigger('click');
         expect(wrapper.find('.count').html()).toContain(1);
     });
+
+    it('increments the count when decrement button is clicked on', ()=>{
+        wrapper.setData({count: 5});
+        wrapper.find('.decrement').trigger('click');
+        expect(wrapper.vm.count).toBe(4);
+    });
+
+    it.only('never goes bellow zero', ()=>{
+        wrapper.setData({count: 0})
+        expect(wrapper.find('.decrement').hasStyle("display", "none")).toBe(true);
+        wrapper.find('.increment').trigger('click');
+        expect(wrapper.find('.decrement').hasStyle("display", "none")).toBe(false);
+    });
+
 });
